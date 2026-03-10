@@ -1,0 +1,84 @@
+# Python cache and test artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Local editors and workspace state
+.vscode/
+*.code-workspace
+
+# Local environments
+.venv/
+venv/
+env/
+ENV/
+monaienv-new/
+
+# Local config and logs
+.env
+.env.*
+*.log
+logs/
+apps/*/logs/
+
+# ML experiment tracking and runtime outputs
+mlruns/
+**/mlruns/
+runs/
+**/runs/
+wandb/
+**/wandb/
+lightning_logs/
+**/lightning_logs/
+tensorboard/
+**/tensorboard/
+events.out.tfevents*
+
+# Model checkpoints and exported artifacts
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.engine
+*.trt
+*.torchscript
+*.joblib
+*.pkl
+*.pickle
+apps/*/model/
+apps/*/model_*/
+
+# Large medical imaging inputs and derived arrays
+*.nii
+*.nii.gz
+*.nrrd
+*.mha
+*.mhd
+*.dcm
+*.dicom
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.zarr
+
+# Common generated visualizations and tables
+Postprocessing/**/*.csv
+Postprocessing/**/*.pdf
+Postprocessing/**/*.png
+Postprocessing/**/*.jpg
+Postprocessing/**/*.jpeg
+Postprocessing/**/*.svg
+Postprocessing/**/*.tex
+Postprocessing/**/*.txt
+
+# Local data symlinks
+/pine
+/pine-LPDrecon
