@@ -2122,6 +2122,23 @@ def plot_contour_slice(
     legend_labels = []
 
     for variant in plot_variants:
+        # Always include every variant in the legend.
+        legend_handles.append(
+            plt.Line2D(
+                [],
+                [],
+                color=CONTOUR_COLORS[variant],
+                linewidth=LINEWIDTH,
+                linestyle="solid",
+            )
+        )
+        legend_labels.append(
+            VARIANT_LABELS.get(
+                variant,
+                variant,
+            )
+        )
+
         label_slice = crop_slice(
             labels[variant],
             x_start,
@@ -2131,6 +2148,7 @@ def plot_contour_slice(
             idx,
         )
 
+        # Only draw the contour when it is present on this slice.
         if not np.any(label_slice):
             continue
 
@@ -2142,24 +2160,10 @@ def plot_contour_slice(
             linestyles="solid",
         )
 
-        legend_handles.append(
-            plt.Line2D(
-                [],
-                [],
-                color=CONTOUR_COLORS[variant],
-            )
-        )
-        legend_labels.append(
-            VARIANT_LABELS.get(
-                variant,
-                variant,
-            )
-        )
-
     ax.axis("off")
 
-    if not legend_handles:
-        return None
+    # if not legend_handles:
+    #     return None
 
     return ax.legend(
         legend_handles,
