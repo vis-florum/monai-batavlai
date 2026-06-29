@@ -14,15 +14,16 @@ import numpy as np
 # ---------------------------------------------------------------------------
 
 SEGMENTATION_ROOTS = [
-    "/media/Store-SSD/Stembank/pine-LPDseg/5srcpos",
-    "/media/Store-SSD/Stembank/pine-LPDseg/9srcpos",
+    # "/media/Store-SSD/Stembank/pine-LPDseg/5srcpos",
+    # "/media/Store-SSD/Stembank/pine-LPDseg/9srcpos",
+    "/media/Store-SSD/Stembank/pine-LPDseg/fullct/"
 ]
 
 # Used only for geometry/header information. The log id is taken from the
 # segmentation filename prefix, e.g. 000552_seg_joint_all_slices.npy -> 000552.
 REFERENCE_NRRD_DIRS = [
     "/media/Store-SSD/Stembank/pine/LPDsample/test/labels/LPDsample-CT",
-    "/media/Store-SSD/Stembank/pine/LPDsample/test/labels/UNET_LPDsample-CT",
+    # "/media/Store-SSD/Stembank/pine/LPDsample/test/labels/UNET_LPDsample-CT",
 ]
 
 OVERWRITE = True
